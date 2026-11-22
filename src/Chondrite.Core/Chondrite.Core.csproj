@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+
+    <AssemblyName>Chondrite.Core</AssemblyName>
+    <RootNamespace>Chondrite.Core</RootNamespace>
+
+    <PackageId>Chondrite.Core</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>LEAP 71</Authors>
+    <Company>LEAP 71</Company>
+    <Description>Core immutable object identity and canonical SHA-256 hashing for Chondrite.</Description>
+    <PackageTags>Chondrite;content-addressed;immutable;object-store;SHA256</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <IsPackable>true</IsPackable>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LEAP71.Semantics" Version="1.0.0-release" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
